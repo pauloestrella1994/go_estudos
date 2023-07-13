@@ -26,4 +26,22 @@ func main() {
 	// by changing the position of the array, the slice changed
 	array2[1] = "Position changed"
 	fmt.Println(slice2)
+
+	// internal arrays
+	slice3 := make([]float32, 10, 11)
+
+	slice3 = append(slice3, 5)
+	slice3 = append(slice3, 6)
+
+	// when you exceed the array size, the size duplicate to carry all the values
+	fmt.Println(slice3)
+	fmt.Println(len(slice3))
+	fmt.Println(cap(slice3))
+
+	slice4 := make([]float32, 5)
+
+	// when you exceed the array size, the size duplicate to carry all the values
+	fmt.Println(slice4)
+	fmt.Println(len(slice4))
+	fmt.Println(cap(slice4))
 }
